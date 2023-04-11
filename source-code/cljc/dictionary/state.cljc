@@ -6,7 +6,8 @@
 ;; ----------------------------------------------------------------------------
 
 ; @atom (map)
-(def TERM-COLLECTION (ratom {}))
+(def TERM-COLLECTION (atom {}))
 
 ; @atom (keyword)
-(def SELECTED-LANGUAGE (ratom nil))
+(def SELECTED-LANGUAGE #?(:cljs (ratom nil)
+                          :clj  (atom  nil)))
