@@ -13,7 +13,7 @@
 
 ; dictionary.side-effects
 (def add-term!        side-effects/add-term!)
-(def add-terms!       side-effects/add-term!)
+(def add-terms!       side-effects/add-terms!)
 (def select-language! side-effects/select-language!)
 
 ; dictionary.state

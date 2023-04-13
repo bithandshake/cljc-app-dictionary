@@ -33,6 +33,6 @@
   ; @return (string)
   ([term-id]
    (look-up term-id @state/SELECTED-LANGUAGE))
-   
+
   ([term-id language-id]
    (get-in @state/TERM-COLLECTION [term-id language-id])))

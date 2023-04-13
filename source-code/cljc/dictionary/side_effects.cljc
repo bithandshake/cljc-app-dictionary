@@ -20,7 +20,7 @@
   ; @usage
   ; (add-terms! {:my-term {:en "My term"}})
   [terms]
-  (swap! state/TERM-COLLECTION update merge terms))
+  (swap! state/TERM-COLLECTION merge terms))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
