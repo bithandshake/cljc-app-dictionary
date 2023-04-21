@@ -25,15 +25,19 @@ The <strong>cljc-dictionary</strong> functional documentation is [available here
 
 You can track the changes of the <strong>cljc-dictionary</strong> library [here](CHANGES.md).
 
+# Usage
+
 ### Index
 
 - [How to add a single term to the collection?](#how-to-add-a-single-term-to-the-collection)
-- [How to add multiple terms to the collection?](#how-to-add-multiple-terms-to-the-collection)
-- [How to set the current language?](#how-to-set-the-current-language)
-- [How to get a term translated to the current language?](#how-to-get-a-term-translated-to-the-current-language)
-- [How to translate a term to the current language?](#how-to-translate-a-term-to-the-current-language)
 
-# Usage
+- [How to add multiple terms to the collection?](#how-to-add-multiple-terms-to-the-collection)
+
+- [How to set the current language?](#how-to-set-the-current-language)
+
+- [How to get a term translated to the current language?](#how-to-get-a-term-translated-to-the-current-language)
+
+- [How to translate a term to the current language?](#how-to-translate-a-term-to-the-current-language)
 
 ### How to add a single term to the collection?
 
