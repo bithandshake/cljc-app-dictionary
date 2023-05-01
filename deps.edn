@@ -1,4 +1,4 @@
 
 {:paths ["source-code/cljc"]
  :deps  {bithandshake/reagent-api {:git/url "https://github.com/bithandshake/reagent-api"
-                                   :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
+                                   :sha     "0aaf6537165b77d21a2f87dfa359d26295227523"}}}
