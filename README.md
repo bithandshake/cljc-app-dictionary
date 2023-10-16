@@ -74,8 +74,8 @@ function returns a term translated to the current language.
 
 ```
 (look-up :apple)
-=>
-"Apple"
+; => 
+; "Apple"
 ```
 
 ### How to translate a term to the current language?
@@ -85,6 +85,6 @@ function translates a term to the current language.
 
 ```
 (translate {:en "Apple" :hu "Alma"})
-=>
-"Apple"
+; =>
+; "Apple"
 ```
