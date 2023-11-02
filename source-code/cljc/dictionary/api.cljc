@@ -8,8 +8,8 @@
 ;; ----------------------------------------------------------------------------
 
 ; dictionary.env
-(def translate env/translate)
 (def look-up   env/look-up)
+(def translate env/translate)
 
 ; dictionary.side-effects
 (def add-term!        side-effects/add-term!)
