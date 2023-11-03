@@ -18,6 +18,13 @@
 ### add-term!
 
 ```
+@description
+Adds a single term to the global dictionary or a specific dictionary.
+```
+
+```
+@param (keyword)(opt) dictionary-id
+Default: :global
 @param (keyword) term-id
 @param (map) term
 ```
@@ -27,13 +34,21 @@
 (add-term! :my-term {:en "My term"})
 ```
 
+```
+@usage
+(add-term! :my-dictionary :my-term {:en "My term"})
+```
+
 <details>
 <summary>Source code</summary>
 
 ```
 (defn add-term!
-  [term-id term]
-  (swap! state/TERM-COLLECTION assoc term-id term))
+  ([term-id term]
+   (add-term! :global term-id term))
+
+  ([dictionary-id term-id term]
+   (swap! state/TERM-COLLECTION assoc-in [dictionary-id term-id] term)))
 ```
 
 </details>
@@ -55,6 +70,13 @@
 ### add-terms!
 
 ```
+@description
+Adds multiple terms to the global dictionary or a specific dictionary.
+```
+
+```
+@param (keyword)(opt) dictionary-id
+Default: :global
 @param (map) terms
 ```
 
@@ -63,13 +85,21 @@
 (add-terms! {:my-term {:en "My term"}})
 ```
 
+```
+@usage
+(add-terms! :my-dictionary {:my-term {:en "My term"}})
+```
+
 <details>
 <summary>Source code</summary>
 
 ```
 (defn add-terms!
-  [terms]
-  (swap! state/TERM-COLLECTION merge terms))
+  ([terms]
+   (add-terms! :global terms))
+
+  ([dictionary-id terms]
+   (swap! state/TERM-COLLECTION update dictionary-id merge terms)))
 ```
 
 </details>
@@ -91,13 +121,26 @@
 ### look-up
 
 ```
+@description
+Looks up a specific term in the global dictionary or a specific dictionary in the selected language.
+```
+
+```
+@param (keyword)(opt) dictionary-id
+Default: :global
 @param (keyword) term-id
-@param (keyword)(opt) language-id
 ```
 
 ```
 @example
 (look-up :apple)
+=>
+"Alma"
+```
+
+```
+@example
+(look-up :my-dictionary :apple)
 =>
 "Alma"
 ```
@@ -112,10 +155,10 @@
 ```
 (defn look-up
   ([term-id]
-   (look-up term-id @state/SELECTED-LANGUAGE))
+   (look-up :global term-id))
 
-  ([term-id language-id]
-   (get-in @state/TERM-COLLECTION [term-id language-id])))
+  ([dictionary-id term-id]
+   (get-in @state/TERM-COLLECTION [dictionary-id term-id (dictionary-id @state/SELECTED-LANGUAGE)])))
 ```
 
 </details>
@@ -137,6 +180,13 @@
 ### select-language!
 
 ```
+@description
+Sets the language of the global dictionary or a specific dictionary.
+```
+
+```
+@param (keyword)(opt) dictionary-id
+Default: :global
 @param (keyword) language-id
 ```
 
@@ -145,13 +195,21 @@
 (language-id! :en)
 ```
 
+```
+@usage
+(language-id! :my-dictionary :en)
+```
+
 <details>
 <summary>Source code</summary>
 
 ```
 (defn select-language!
-  [language-id]
-  (reset! state/SELECTED-LANGUAGE language-id))
+  ([language-id]
+   (select-language! :global language-id))
+
+  ([dictionary-id language-id]
+   (swap! state/SELECTED-LANGUAGE assoc dictionary-id language-id)))
 ```
 
 </details>
@@ -173,15 +231,29 @@
 ### translate
 
 ```
-@param (map) term
-@param (keyword)(opt) language-id
+@description
+Looks up a specific term in the global dictionary or a specific dictionary in the provided language.
+```
+
+```
+@param (keyword)(opt) dictionary-id
+Default: :global
+@param (keyword) term-id
+@param (keyword) language-id
 ```
 
 ```
 @example
-(translate {:en "Apple" :hu "Alma"})
+(translate :apple :hu)
 =>
-"Apple"
+"Alma"
+```
+
+```
+@example
+(translate :my-dictionary :apple :hu)
+=>
+"Alma"
 ```
 
 ```
@@ -193,11 +265,11 @@
 
 ```
 (defn translate
-  ([term]
-   (translate term @state/SELECTED-LANGUAGE))
+  ([term-id language-id]
+   (translate :global term-id language-id))
 
-  ([term language-id]
-   (get term language-id)))
+  ([dictionary-id term-id language-id]
+   (get-in @state/TERM-COLLECTION [dictionary-id term-id language-id])))
 ```
 
 </details>
