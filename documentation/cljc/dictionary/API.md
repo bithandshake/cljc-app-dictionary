@@ -1,5 +1,9 @@
 
-# dictionary.api isomorphic namespace
+### dictionary.api
+
+Functional documentation of the dictionary.api isomorphic namespace
+
+---
 
 ##### [README](../../../README.md) > [DOCUMENTATION](../../COVER.md) > dictionary.api
 
@@ -14,6 +18,8 @@
 - [select-language!](#select-language)
 
 - [translate](#translate)
+
+---
 
 ### add-term!
 
@@ -288,5 +294,5 @@ Default: :global
 
 ---
 
-This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.
+<sub>This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.</sub>
 
