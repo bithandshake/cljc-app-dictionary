@@ -7,18 +7,18 @@
 
 (defn look-up
   ; @description
-  ; Looks up a specific term in the global dictionary or a specific dictionary in the selected language.
+  ; Returns a specific term translated to the selected language.
   ;
   ; @param (keyword)(opt) dictionary-id
   ; Default: :global
   ; @param (keyword) term-id
   ;
-  ; @example
+  ; @usage
   ; (look-up :apple)
   ; =>
   ; "Alma"
   ;
-  ; @example
+  ; @usage
   ; (look-up :my-dictionary :apple)
   ; =>
   ; "Alma"
@@ -32,19 +32,19 @@
 
 (defn translate
   ; @description
-  ; Looks up a specific term in the global dictionary or a specific dictionary in the provided language.
+  ; Returns a specific term translated to the given language.
   ;
   ; @param (keyword)(opt) dictionary-id
   ; Default: :global
   ; @param (keyword) term-id
   ; @param (keyword) language-id
   ;
-  ; @example
+  ; @usage
   ; (translate :apple :hu)
   ; =>
   ; "Alma"
   ;
-  ; @example
+  ; @usage
   ; (translate :my-dictionary :apple :hu)
   ; =>
   ; "Alma"
