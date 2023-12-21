@@ -23,7 +23,7 @@
    (add-term! :global term-id term))
 
   ([dictionary-id term-id term]
-   (swap! state/TERM-COLLECTION assoc-in [dictionary-id term-id] term)))
+   (swap! state/TERM-COLLECTIONS assoc-in [dictionary-id term-id] term)))
 
 (defn add-terms!
   ; @description
@@ -42,7 +42,7 @@
    (add-terms! :global terms))
 
   ([dictionary-id terms]
-   (swap! state/TERM-COLLECTION update dictionary-id merge terms)))
+   (swap! state/TERM-COLLECTIONS update dictionary-id merge terms)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

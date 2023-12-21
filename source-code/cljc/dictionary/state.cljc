@@ -6,9 +6,19 @@
 ;; ----------------------------------------------------------------------------
 
 ; @atom (map)
-(def TERM-COLLECTION #?(:cljs (ratom {})
-                        :clj  (atom  {})))
+;
+; @usage
+; (deref TERM-COLLECTIONS)
+; =>
+; {:my-dictionary {:my-term {:en "My term"}}}
+(def TERM-COLLECTIONS #?(:clj  (atom  {})
+                         :cljs (ratom {})))
 
 ; @atom (map)
-(def SELECTED-LANGUAGE #?(:cljs (ratom {})
-                          :clj  (atom  {})))
+;
+; @usage
+; (deref SELECTED-LANGUAGE)
+; =>
+; {:my-dictionary :en}
+(def SELECTED-LANGUAGE #?(:clj  (atom  {})
+                          :cljs (ratom {})))

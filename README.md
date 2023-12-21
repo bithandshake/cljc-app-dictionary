@@ -3,8 +3,7 @@
 
 ### Overview
 
-The <strong>cljc-dictionary</strong> is a simple multilingual application / website dictionary for
-Clojure projects.
+The <strong>cljc-dictionary</strong> is a simple multilingual application dictionary for Clojure projects.
 
 ### deps.edn
 

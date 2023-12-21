@@ -17,5 +17,5 @@
 (def select-language! side-effects/select-language!)
 
 ; @redirect (dictionary.state/*)
-(def TERM-COLLECTION   state/TERM-COLLECTION)
+(def TERM-COLLECTIONS  state/TERM-COLLECTIONS)
 (def SELECTED-LANGUAGE state/SELECTED-LANGUAGE)
