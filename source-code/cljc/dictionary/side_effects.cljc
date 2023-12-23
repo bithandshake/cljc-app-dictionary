@@ -1,6 +1,6 @@
 
-(ns dictionary.side-effects
-    (:require [dictionary.state :as state]))
+(ns app-dictionary.side-effects
+    (:require [app-dictionary.state :as state]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 
-(ns dictionary.env
-    (:require [dictionary.state :as state]))
+(ns app-dictionary.env
+    (:require [app-dictionary.state :as state]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

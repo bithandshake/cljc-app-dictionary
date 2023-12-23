@@ -1,5 +1,5 @@
 
-(ns dictionary.state
+(ns app-dictionary.state
     #?(:cljs (:require [reagent.api :refer [ratom]])))
 
 ;; ----------------------------------------------------------------------------
