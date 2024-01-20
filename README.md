@@ -8,17 +8,17 @@ The <strong>cljc-app-dictionary</strong> is a simple multilingual application di
 ### deps.edn
 
 ```
-{:deps {bithandshake/cljc-app-dictionary {:git/url "https://github.com/bithandshake/cljc-app-dictionary"
-                                          :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
+{:deps {mt-app-kit/cljc-app-dictionary {:git/url "https://github.com/mt-app-kit/cljc-app-dictionary"
+                                        :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
 ```
 
 ### Current version
 
-Check out the latest commit on the [release branch](https://github.com/bithandshake/cljc-app-dictionary/tree/release).
+Check out the latest commit on the [release branch](https://github.com/mt-app-kit/cljc-app-dictionary/tree/release).
 
 ### Documentation
 
-The <strong>cljc-app-dictionary</strong> functional documentation is [available here](https://bithandshake.github.io/cljc-app-dictionary).
+The <strong>cljc-app-dictionary</strong> functional documentation is [available here](https://mt-app-kit.github.io/cljc-app-dictionary).
 
 ### Changelog
 
