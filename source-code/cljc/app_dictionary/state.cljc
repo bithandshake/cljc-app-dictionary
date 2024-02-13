@@ -5,6 +5,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @description
+; Stored multilingual terms.
+;
 ; @atom (map)
 ;
 ; @usage
@@ -14,6 +17,9 @@
 (def TERM-COLLECTIONS #?(:clj  (atom  {})
                          :cljs (ratom {})))
 
+; @description
+; Selected language of the dictionary.
+;
 ; @atom (map)
 ;
 ; @usage

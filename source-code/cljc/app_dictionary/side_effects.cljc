@@ -7,7 +7,7 @@
 
 (defn add-term!
   ; @description
-  ; Adds a single term to a dictionary.
+  ; Adds a single term to a specific (or the global) dictionary.
   ;
   ; @param (keyword)(opt) dictionary-id
   ; Default: :global
@@ -27,7 +27,7 @@
 
 (defn add-terms!
   ; @description
-  ; Adds multiple terms to a dictionary.
+  ; Adds multiple terms to a specific (or the global) dictionary.
   ;
   ; @param (keyword)(opt) dictionary-id
   ; Default: :global
@@ -49,7 +49,7 @@
 
 (defn select-language!
   ; @description
-  ; Sets the language for a dictionary.
+  ; Sets the language of a specific (or the global) dictionary.
   ;
   ; @param (keyword)(opt) dictionary-id
   ; Default: :global
