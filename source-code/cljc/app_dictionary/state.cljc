@@ -1,6 +1,6 @@
 
 (ns app-dictionary.state
-    #?(:cljs (:require [reagent.api :refer [ratom]])))
+    #?(:cljs (:require [reagent.core :as reagent])))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -14,8 +14,8 @@
 ; (deref TERM-COLLECTIONS)
 ; =>
 ; {:my-dictionary {:my-term {:en "My term"}}}
-(def TERM-COLLECTIONS #?(:clj  (atom  {})
-                         :cljs (ratom {})))
+(def TERM-COLLECTIONS #?(:clj  (atom         {})
+                         :cljs (reagent/atom {})))
 
 ; @description
 ; Selected language of the dictionary.
@@ -26,5 +26,5 @@
 ; (deref SELECTED-LANGUAGE)
 ; =>
 ; {:my-dictionary :en}
-(def SELECTED-LANGUAGE #?(:clj  (atom  {})
-                          :cljs (ratom {})))
+(def SELECTED-LANGUAGE #?(:clj  (atom         {})
+                          :cljs (reagent/atom {})))
