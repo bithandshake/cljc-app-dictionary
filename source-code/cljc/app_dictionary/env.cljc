@@ -28,7 +28,8 @@
    (look-up :global term-id))
 
   ([dictionary-id term-id]
-   (get-in @state/TERM-COLLECTIONS [dictionary-id term-id (dictionary-id @state/SELECTED-LANGUAGE)])))
+   (if-let [selected-language (dictionary-id @state/SELECTED-LANGUAGE)]
+           (get-in @state/TERM-COLLECTIONS [dictionary-id term-id selected-language]))))
 
 (defn translate
   ; @description
