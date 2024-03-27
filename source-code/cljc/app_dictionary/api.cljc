@@ -6,11 +6,11 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
- 
+
 ; @redirect (app-dictionary.env/*)
 (def look-up   env/look-up)
 (def translate env/translate)
-
+ 
 ; @redirect (app-dictionary.side-effects/*)
 (def add-term!        side-effects/add-term!)
 (def add-terms!       side-effects/add-terms!)
